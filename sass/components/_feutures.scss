@@ -1,0 +1,37 @@
+.feutures__list {
+    display: flex;
+}
+
+.feutures__item {
+    margin-left: 30px;
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.feutures__thumb {
+    @extend %align-list;
+    justify-content: center;
+
+    margin-bottom: 30px;
+    width: 270px;
+    height: 120px;
+
+    background-color: var(--secondary-bg-color);
+}
+
+.heading {
+    @include font(14px, 700, 1.14, null);
+    text-transform: uppercase;
+    
+    color: var(--title-text-color);
+}
+
+.feutures__heading {
+    margin-bottom: 10px;
+}
+
+.feutures__text {
+    max-width: 270px;
+}

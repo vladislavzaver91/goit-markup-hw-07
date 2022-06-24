@@ -1,0 +1,152 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--footer-bg-color);
+}
+
+.footer .container {
+    @extend %baseline-list;
+}
+
+.address-list__location,
+.address-list__mail {
+    margin-bottom: 9px;
+}
+
+.address-list__location {
+    color: var(--primary-white-color);
+}
+
+.address-list__mail,
+.address-list__tel {
+    color: var(--footer-contact-color);
+
+    transition: color 250ms var(--primary-cubic);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+/* ---------footer-soc-------- */
+
+.subscribe {
+    margin-left: 70px;
+}
+
+.subscribe__title,
+.join-box__text {
+    margin-bottom: 20px;
+    @include font(14px, 700, 1.14, null);
+    text-transform: uppercase;
+
+    color: var(--primary-white-color);
+}
+
+.subscribe__list {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe__item {
+    margin-left: 10px;
+
+    width: 44px;
+    height: 44px;
+
+    &:first-child {
+            margin-left: 0;
+        }
+}
+
+.subscribe__link {
+    @extend %align-list;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    color: var(--primary-white-color);
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 50%;
+
+    transition: background-color 250ms var(--primary-cubic),
+        color 250ms var(--primary-cubic);
+
+        &:hover,
+        &:focus {
+                background-color: var(--accent-color);
+            }
+}
+
+.subscribe__icon {
+    fill: currentColor;
+}
+
+/* ---------------join-box---------------- */
+
+.join-box {
+    margin-left: auto;
+}
+
+.join-box__form {
+    @extend %baseline-list;
+}
+
+.join-box__btn {
+    @extend %align-list;
+
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 28px;
+
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms var(--primary-cubic),
+        color 250ms var(--primary-cubic);
+
+    @include font(16px, 700, 1.88, 0.06em);
+
+    &:hover,
+    &:focus {
+            color: var(--title-text-color);
+            background-color: var(--primary-white-color);
+        }
+}
+
+.join-box__icon {
+    margin-left: 10px;
+    fill: currentColor;
+}
+
+.join-box__input {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 15px 16px;
+
+    color: var(--primary-text-color);
+    background-color: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+
+    &:focus {
+            border-color: var(--accent-color);
+        }
+    
+    &::placeholder {
+            font-size: 16px;
+            line-height: 20px;
+            line-height: 1.25;
+    
+            color: rgba(255, 255, 255, 0.6);
+        }
+}
+
